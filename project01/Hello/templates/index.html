@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<body>
+
+    
+     <form method="get" action="/search" >
+    <div class="main-search-input-wrap">
+       
+     
+        <div class="main-search-input fl-wrap">
+                                            <div class="main-search-input-item">
+                                                <input name ="query" type="text"  value="" placeholder="Search Anything..."  id="query">
+                                            </div>
+                                            
+                                            <button class="main-search-button">Search</button>
+                                            
+                                        </div>
+                                    </form>
+                                 
+                                        
+                                        
+        
+                                         {% comment %} <form method="get" action="/search" >
+                                            <div class="input-group mb-3">
+                                    
+                                                <input type="text" name="query"class='form-control form-control-lg' placeholder="Search"/>
+                                                <button class="btn-btn-dark btn-lg" type="submit" id="button-addon2">Button</button>
+                                            </div >
+                                        </div>
+  
+                                    </form> {% endcomment %}
+                                    {% block body %} {% endblock body %}
+                                    <div class="container">
+                                    {% block content %} {% endblock content %}
+                                    </div>
+                                    {% block article %}{% endblock article %}
+                                    {% block Posts %}{% endblock Posts %}
+                                </body>
+
+
+</html>
