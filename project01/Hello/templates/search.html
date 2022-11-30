@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -31,10 +30,7 @@
       </div>
     </div>
     <div class="demo-container">
-        
-    <a href="data:text/csv;charset=utf-8,Title,Author,WOSid
-    {{*allPosts}}" download="output2.csv">
-            <button>DOWNLOAD</button>
+        <a href="{% url 'venue_csv' %}">
             <button>DOWNLOAD</button>
         </a>
     </div> 
@@ -44,3 +40,4 @@
 
 {% endblock content %}
 </html>
+

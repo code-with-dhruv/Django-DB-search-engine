@@ -41,8 +41,8 @@ def venue_csv(request):
     response['Content-Disposition'] = 'attachment,filename=venues.text'
     writer = csv.writer(response)
     venues = Excel.objects.all()
-    writer.writerow(['Title', 'Author', 'WOSid'])
+    writer.writerow(['Title', 'Author', 'WOSid','doctype','Keywords','Source'])
     for i in csv_f:
-        writer.writerow([i.Title, i.authors, i.dbid])
+        writer.writerow([i.Title, i.authors, i.dbid,i.Docu,i.Keyw,i.Source])
 
     return response
